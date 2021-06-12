@@ -1,0 +1,11 @@
+library(ranger)
+library(tidymodels)
+library(readr)
+library(RWeka)
+library(readxl)
+data <- read_excel("~/Desktop/data.xlsx")
+factor_data <- lapply(data, as.factor)
+fit <- J48(bugbinary~., data=factor_data)
+
+predictions <- predict(fit, factor_data)
+table(predictions, factor_data$bugbinary)
