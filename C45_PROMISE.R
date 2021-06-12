@@ -9,3 +9,4 @@ fit <- J48(bugbinary~., data=factor_data)
 
 predictions <- predict(fit, factor_data)
 table(predictions, factor_data$bugbinary)
+#change
