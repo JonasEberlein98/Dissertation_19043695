@@ -1,3 +1,4 @@
+#standardized way of saving the complexity measures
 library(ECoL)
 overlap_ant13 <- overlapping(bugbinary~., data, measures= "all")
 neighbor_ant13 <- neighborhood(bugbinary~., data, measures= "all")
