@@ -72,6 +72,7 @@ dim_jedit32 <- dimensionality(bugbinary~., data, measures= "all")
 bal_jedit32 <- balance(bugbinary~., data, measures= "all")
 net_jedit32 <- network(bugbinary~., data, measures= "all")
 corr_jedit32 <- correlation(bugbinary~., data, measures= "all")
+<<<<<<< HEAD
 smooth_jedit32 <- smoothness(bugbinary~., data, measures= "all")
 
 overlap_log4j12 <- overlapping(bugbinary~., data, measures= "all")
@@ -109,3 +110,6 @@ bal_lucene20 <- balance(bugbinary~., data, measures= "all")
 net_lucene20 <- network(bugbinary~., data, measures= "all")
 corr_lucene20 <- correlation(bugbinary~., data, measures= "all")
 smooth_lucene20 <- smoothness(bugbinary~., data, measures= "all")
+=======
+smooth_jedit32 <- smoothness(bugbinary~., data, measures= "all")
+>>>>>>> 80a36ca4ec297ed290bcaafb3cf3a1029158546a
