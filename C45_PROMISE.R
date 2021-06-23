@@ -16,4 +16,6 @@ dataTest.pred <- predict(trainJ48, newdata = dataTest)
 table(dataTest$bugbinary, dataTest.pred)
 precision(data, dataTest$bugbinary, dataTest.pred)
 f_meas(data, dataTest$bugbinary, dataTest.pred)
-
+recall(data, dataTest$bugbinary, dataTest.pred)
+mcc(data, dataTest$bugbinary, dataTest.pred)
+roc_auc(data, dataTest$bugbinary, dataTest.pred)
