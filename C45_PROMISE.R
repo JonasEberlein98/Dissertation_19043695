@@ -15,7 +15,7 @@ trainJ48 <- J48(bugbinary~., dataTrain)
 dataTest.pred <- predict(trainJ48, newdata = dataTest)
 table(dataTest$bugbinary, dataTest.pred)
 
-recall(data, dataTest$bugbinary, dataTest.pred)
+
 mcc(data, dataTest$bugbinary, dataTest.pred)
 roc_auc(dataTest, dataTest$bugbinary, 1)
 
