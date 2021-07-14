@@ -2,7 +2,7 @@
 library(ECoL)
 
 #input-scheme. Simply input dataset name after '_'
-overlap_ <- overlapping(bugbinary~., data, measures= "all")
+overlap <- overlapping(bugbinary~., data, measures= "all")
 neighbor_ <- neighborhood(bugbinary~., data, measures= "all")
 lin_ <- linearity(bugbinary~., data, measures= "all")
 dim_ <- dimensionality(bugbinary~., data, measures= "all")
@@ -10,6 +10,7 @@ bal_ <- balance(bugbinary~., data, measures= "all")
 net_ <- network(bugbinary~., data, measures= "all")
 corr_ <- correlation(bugbinary~., data, measures= "all")
 smooth_ <- smoothness(bugbinary~., data, measures= "all")
+
 
 
 overlap_camel16 <- overlapping(bugbinary~., data, measures= "all")
