@@ -13,7 +13,6 @@ dimensionality(bugbinary~., data, measures= "all")
 balance(bugbinary~., data, measures= "all")
 network(bugbinary~., data, measures= "all")
 correlation(bugbinary~., data, measures= "all")
-smoothness(bugbinary~., data, measures= "all")
 
 data <- 
   data %>% 
