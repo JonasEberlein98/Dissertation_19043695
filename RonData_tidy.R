@@ -6,13 +6,6 @@ library(ECoL)
 library(discrim)
 library(e1071)
 
-overlapping(bugbinary~., data, measures= "all")
-neighborhood(bugbinary~., data, measures= "all")
-linearity(bugbinary~., data, measures= "all")
-dimensionality(bugbinary~., data, measures= "all")
-balance(bugbinary~., data, measures= "all")
-network(bugbinary~., data, measures= "all")
-correlation(bugbinary~., data, measures= "all")
 
 data <- 
   data %>% 

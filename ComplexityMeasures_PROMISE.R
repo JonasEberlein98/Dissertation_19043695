@@ -9,7 +9,7 @@ dim_ <- dimensionality(bugbinary~., data, measures= "all")
 bal_ <- balance(bugbinary~., data, measures= "all")
 net_ <- network(bugbinary~., data, measures= "all")
 corr_ <- correlation(bugbinary~., data, measures= "all")
-smooth_ <- smoothness(bugbinary~., data, measures= "all")
+
 
 
 
