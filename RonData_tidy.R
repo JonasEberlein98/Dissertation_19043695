@@ -59,29 +59,29 @@ metricsSet <- metric_set(yardstick::precision, yardstick::f_meas , yardstick::re
 C50classWithPredictions <- testSet_processed %>%
   dplyr::select(bugbinary) %>%
   bind_cols(predict(C50Fit, testSet_processed))
-metricsSet(C50classWithPredictions, truth = bugbinary, estimate = .pred_class, event_level = "first")
+C50performance1 <- metricsSet(C50classWithPredictions, truth = bugbinary, estimate = .pred_class, event_level = "first")
 C50_final <- data_wf %>%
   add_model(C50Model) %>%
   last_fit(trainIndex)
-collect_metrics(C50_final)
+C50performance2 <- collect_metrics(C50_final)
 #NB
 NBclassWithPredictions <- testSet_processed %>%
   dplyr::select(bugbinary) %>%
   bind_cols(predict(NBFit, testSet_processed))
-metricsSet(NBclassWithPredictions, truth = bugbinary, estimate = .pred_class, event_level = "first")
+NBperformance1 <- metricsSet(NBclassWithPredictions, truth = bugbinary, estimate = .pred_class, event_level = "first")
 NB_final <- data_wf %>%
   add_model(NBModel) %>%
   last_fit(trainIndex)
-collect_metrics(NB_final)
+NBperformance2 <- collect_metrics(NB_final)
 #NN
 NNclassWithPredictions <- testSet_processed %>%
   dplyr::select(bugbinary) %>%
   bind_cols(predict(NNFit, testSet_processed))
-metricsSet(NNclassWithPredictions, truth = bugbinary, estimate = .pred_class, event_level = "first")
+NNperformance1 <- metricsSet(NNclassWithPredictions, truth = bugbinary, estimate = .pred_class, event_level = "first")
 NN_final <- data_wf %>%
   add_model(NNModel) %>%
   last_fit(trainIndex)
-collect_metrics(NN_final)
+NNperformance2 <- collect_metrics(NN_final)
 
 
 
