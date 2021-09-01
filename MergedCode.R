@@ -4,6 +4,8 @@ library(ECoL)
 library(discrim)
 library(e1071)
 library("Hmisc")
+library(C50)
+library(klaR)
 
 #ONLY RUN ONCE!!!! 
 #create table to gather the complexity metrics
